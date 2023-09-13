@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainWiz Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background:url(vertical_tech_tic\ .png) ;
+            background-size: cover;
+            
+        }
+        
+form{
+    /* filter: blur(6px); */
+}
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+           backdrop-filter: blur(6px);
+            padding: 20px;
+            /* background-color: #fff; */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            
+        }
+
+        h2 {
+            text-align: center;
+            color: #4F709C;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: transparent;
+            background-image: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-128.png');
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            padding-right: 30px;
+            background-color: #fff;
+            
+        }
+
+        button[type="submit"] {
+            background-color: #4F709C;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .info{
+            padding: 3px;
+            
+        }
+        .organisers{
+            padding: 2px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>YOUTH-TECH-TIC Registration Form</h2>
+        <form action="" method="post" name="amlform">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="entry.111559602" name="entry.111559602" required>
+            </div>
+            <div class="form-group">
+                <label  style="padding-top: 15px;"   for="class">Class and Roll Number:</label>
+                <input type="text" id="entry.116842325" name="entry.116842325" required>
+            </div>
+
+            <div class="form-group">
+                <label  style="padding-top: 15px;"   for="school">School:</label>
+                <input type="text" id="entry.60307568" name="entry.60307568" required>
+            </div>
+            <div class="form-group">
+                <label  style="padding-top: 15px;"   for="school">Principal:</label>
+                <input type="text" id="entry.1457998634" name="entry.1457998634" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">School Contact Number:</label>
+                <input type="tel" id="entry.1214496840" name="entry.1214496840" required>
+            </div>
+            
+            <div class="form-group">
+                <label  style="padding-top: 15px;"   for="school">School Address:</label>
+                <input type="text" id="entry.1464946204" name="entry.1464946204" required>
+            </div>
+            <div class="form-group">
+                <label  style="padding-top: 15px;"   for="school">School ID Card Google Drive Link(give access to all):</label>
+                <input type="text" id="entry.115801175" name="entry.115801175" required>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        
+<!--entry.111559602
+    entry.116842325
+    entry.60307568
+entry.1457998634
+entry.1214496840
+entry.1464946204
+entry.115801175 -->
+        <!-- <div class="info">For any further details please contact the following organisers,</div>
+        <div class="organisers">Dewansh Singh Chandel - +91 80859 07445</div>
+        <div class="organisers">Lavanya - +91 870-8493621</div>
+        <div class="organisers">Farhan Obaid- +91 76673 36359</div> -->
+    </div>
+    <script>
+        const scriptURL = 'https://docs.google.com/forms/u/0/d/1sEVU1XrnhAXxr6g0Wimq7eD3zw4XIPzmlz-Bkr17Fho/formResponse'
+        const form = document.forms['amlform']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thank you! your form is submitted successfully." ))
+            .then(() => {  window.location.reload(); })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+</body>
+</html>
